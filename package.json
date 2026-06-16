@@ -1,0 +1,19 @@
+{
+  "name": "altagama-boutique",
+  "version": "1.0.0",
+  "description": "Compilación y ofuscación con rutas personalizadas",
+  "main": "main/src/script/script.js",
+  "scripts": {
+    "clean": "npx shx rm -rf dist && npx shx mkdir dist",
+    "build:html": "npx shx cp main/src/index.html dist/index.html",
+    "build:css": "npx shx cp main/src/style.css dist/style.css",
+    "build:js": "javascript-obfuscator main/src/script.js --output dist/script.js --compact true --self-defending true --string-array true --string-array-encoding 'rc4' --transform-object-keys true",
+    "build": "npm run clean && npm run build:html && npm run build:css && npm run build:js",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "javascript-obfuscator": "^4.1.1",
+    "shx": "^0.3.4"
+  }
+}

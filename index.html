@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALTAGAMA | Exploración Guiada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-header">
+            <div class="brand-block">
+                <span class="logo">ALTAGAMA</span>
+                <span class="slogan">TU VIAJE, TU ESENCIA</span>
+            </div>
+            <button class="menu-toggle" id="menu-toggle-btn" aria-label="Abrir menú">☰</button>
+        </div>
+        
+        <ul class="nav-links hidden-mobile" id="nav-menu-links">
+            <li><a href="#inicio" id="lnk-inicio">Inicio</a></li>
+            <li><a href="#premium" id="lnk-perfumes">Perfumes</a></li>
+            <li><a href="#ofertas" id="lnk-ofertas">Ofertas</a></li>
+            <li><a href="#combos" id="lnk-combos">Combos</a></li>
+            
+            <li class="nav-utils">
+                <span class="util-icon" id="nav-search-trigger">🔍 EXPLORAR</span>
+                <button class="btn-nav-auth" id="nav-auth-trigger">Ingresar</button>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="dashboard-container" id="dashboard-view">
+        <header class="hero-section">
+            <div class="hero-content">
+                <p class="hero-pre">DESCUBRE TU ESENCIA</p>
+                <h1>ALTAGAMA</h1>
+                <p class="hero-sub">Explora nuestra exclusiva selección de perfumes de lujo. Calidad, elegancia y autenticidad.</p>
+                <button class="btn-hero" id="hero-explore-btn">Explorar Colección →</button>
+            </div>
+        </header>
+
+        <section id="premium" class="dashboard-section">
+            <h2>✨ Fragancias de Nicho</h2>
+            <div class="grid-container" id="grid-premium"></div>
+        </section>
+    </main>
+
+    <div id="auth-view" class="auth-page-container hidden">
+        <div class="auth-card">
+            <span class="back-to-dashboard" onclick="conmutarVistaADashboard()">← Volver a la boutique</span>
+            <div id="login-form-container" class="auth-form-block">
+                <h2 class="auth-title">Acceso Privilege</h2>
+                <p class="auth-subtitle">Introduce tus credenciales premium.</p>
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <input type="email" id="login-email" placeholder="cliente@altagama.com">
+                </div>
+                <div class="input-group">
+                    <label>Contraseña</label>
+                    <input type="password" id="login-pass" placeholder="••••••••">
+                </div>
+                <button class="btn-gold" id="btn-execute-login">Iniciar Sesión</button>
+                <p class="auth-switch">¿Eres nuevo? <span id="go-to-register">Regístrate</span></p>
+            </div>
+            <div id="register-form-container" class="auth-form-block hidden">
+                <h2 class="auth-title">Membresía Altagama</h2>
+                <button class="btn-gold" id="btn-execute-register">Crear Cuenta</button>
+                <p class="auth-switch">¿Ya tienes cuenta? <span id="go-to-login">Inicia sesión</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="search-view" class="search-page-container hidden">
+        <div class="search-wrapper">
+            <span class="back-to-dashboard" onclick="conmutarVistaADashboard()">← Cerrar Búsqueda</span>
+            
+            <h2 class="search-main-title">¿Qué notas deseas proyectar hoy?</h2>
+            <p class="search-main-subtitle">Selecciona una familia olfativa para evitar errores de escritura y descubrir tu fragancia ideal.</p>
+            
+            <div class="tag-filter-container">
+                <button class="tag-btn" data-tipo="Dulce">🍬 Dulce</button>
+                <button class="tag-btn" data-tipo="Acido">🍋 Ácido</button>
+                <button class="tag-btn" data-tipo="Oriental">🕌 Oriental</button>
+                <button class="tag-btn" data-tipo="Herbal">🌿 Herbal</button>
+            </div>
+
+            <div class="search-results-section">
+                <h3 id="search-results-title">Selecciona una categoría superior</h3>
+                <div class="grid-container" id="grid-search-results"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 ALTAGAMA. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

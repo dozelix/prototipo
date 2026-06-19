@@ -1,0 +1,12 @@
+/* ==========================================================================
+   VARIABLES MAESTRAS (main/src/style/styles/variables.css)
+   ========================================================================== */
+:root {
+    --bg-dark: #070708;       
+    --bg-card: #111215;       
+    --gold: #cca462;          
+    --gold-hover: #e5c17d;
+    --text-light: #f5f5f7;
+    --text-muted: #a1a1a6;    
+    --border-gold: rgba(204, 164, 98, 0.15);
+}

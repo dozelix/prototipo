@@ -1,0 +1,110 @@
+/* ==========================================================================
+   MÓDULO: SIDEBAR DEL CARRITO (main/src/style/styles/cart.css)
+   Flotante, Aislado, Opaco y Sincronizado con Cart.js
+   ========================================================================== */
+
+.cart-sidebar {
+    position: fixed;            /* Se ancla a la pantalla, libre del flujo del Dashboard */
+    top: 0;
+    right: 0;
+    width: 420px;               /* Ancho elegante para escritorio */
+    max-width: 100vw;           /* Ocupa el 100% en teléfonos para no desbordar */
+    height: 100vh;              /* Ocupa todo el alto de la ventana */
+    background-color: #0b0c0e;  /* Fondo ultra oscuro COMPLETAMENTE SÓLIDO */
+    color: #ffffff;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5); /* Sombra lateral para dar profundidad */
+    z-index: 9500;              /* Prioridad máxima por sobre el Navbar y fondos */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    /* Control de Animación Deslizable Lateral */
+    transform: translateX(100%); /* Oculto por defecto a la derecha */
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Estado Activo (Inyectado por JS) */
+.cart-sidebar.cart-open {
+    transform: translateX(0); /* Se desliza suavemente hacia adentro */
+}
+
+/* --- CABECERA DEL CARRITO --- */
+.cart-sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cart-sidebar-header h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.close-cart-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-cart-btn:hover {
+    color: var(--gold);
+}
+
+/* --- CUERPO SCROLLABLE DE PRODUCTOS --- */
+.cart-items-container {
+    flex: 1;
+    overflow-y: auto;          /* Permite hacer scroll interno */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.empty-cart-msg {
+    text-align: center;
+    opacity: 0.5;
+    font-size: 0.95rem;
+    margin-top: 3rem;
+    letter-spacing: 1px;
+}
+
+/* --- PIE DEL CARRITO --- */
+.cart-sidebar-footer {
+    padding: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #050607;
+}
+
+.cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.cart-total-amount {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 480px) {
+    .cart-sidebar {
+        width: 100vw;
+    }
+}

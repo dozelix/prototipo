@@ -1,0 +1,28 @@
+/* ==========================================================================
+   MASTER ORQUESTADOR CENTRAL: main/src/style/styles.css (Sincronizado)
+   Arquitectura Modular Definitiva 1 a 1 con Componentes JS
+   ========================================================================== */
+
+/* 1. CAPA DE CONFIGURACIÓN Y MOTORES GLOBALES */
+@import './styles/variables.css';
+@import './styles/base.css';
+
+/* 2. CAPA DE ESTRUCTURA COMÚN Y NAVEGACIÓN */
+@import './styles/navbar.css';
+
+/* 3. SUB-COMPONENTES DEL DASHBOARD (Atmósfera Nocturna) */
+@import './styles/hero.css';
+@import './styles/trustbar.css'; 
+@import './styles/brandsmarquee.css';
+
+/* 4. SECCIONES DINÁMICAS (Catálogos y Descubrimiento) */
+@import './styles/productcatalog.css';   /* Antes dashboard.css */
+@import './styles/discoverysection.css'; /* Antes dashboard2.css */
+
+/* 5. MÓDULOS DE NEGOCIO AISLADOS e INTERFACES SPA */
+@import './styles/search.css';
+@import './styles/cart.css';
+@import './styles/auth.css';
+
+/* 6. CIERRE ESTRUCTURAL DE LA BOUTIQUE */
+@import './styles/footer.css';

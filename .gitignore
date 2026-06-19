@@ -13,3 +13,4 @@ dist/
 
 # Registros de errores de npm
 npm-debug.log*
+.md

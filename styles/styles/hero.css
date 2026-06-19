@@ -1,0 +1,100 @@
+/* ==========================================================================
+   MÓDULO: BANNER HERO PREMIUM (main/src/style/styles/hero.css)
+   ========================================================================== */
+
+.hero-section {
+    background-color: #020203;
+    padding: 6rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.hero-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-pre {
+    font-size: 0.75rem;
+    color: var(--gold);
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.hero-sub-title {
+    font-size: 1.1rem;
+    color: #ffffff;
+    letter-spacing: 5px;
+    margin: 0 0 1.5rem 0;
+    opacity: 0.9;
+}
+
+.hero-description {
+    font-size: 0.95rem;
+    color: #a1a1a6;
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 0 2.5rem 0;
+}
+
+.btn-hero {
+    align-self: flex-start;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: var(--gold);
+    color: #000000;
+}
+
+.hero-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-display img {
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+/* Adaptación para pantallas de escritorio */
+@media (min-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .hero-content {
+        text-align: left;
+    }
+}

@@ -1,0 +1,121 @@
+/* ==========================================================================
+   MÓDULO: INTERFAZ DE AUTENTICACIÓN PRIVILEGE (main/src/style/styles/auth.css)
+   Responsabilidad Única: Maquetación exclusiva de Login y Registro
+   ========================================================================== */
+
+/* --- ENVOLVENTE MÁXIMO DE LA PÁGINA AUTH --- */
+.auth-page-container {
+    width: 100%;
+    /* Resta la altura estimada del Navbar para evitar desbordes y centrar verticalmente */
+    min-height: calc(100vh - 90px); 
+    display: grid;
+    place-items: center;
+    overflow-y: auto;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+/* --- TARJETA CONTENEDORA --- */
+.auth-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-gold);
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- TEXTOS, ENCABEZADOS Y ENLACES --- */
+.back-to-dashboard { 
+    color: var(--gold); 
+    font-size: 0.85rem; 
+    cursor: pointer; 
+    margin-bottom: 1.5rem; 
+    text-decoration: underline; 
+    align-self: flex-start; 
+    font-family: sans-serif; 
+}
+
+.auth-title { 
+    color: var(--gold); 
+    font-size: 1.4rem; 
+    text-align: center; 
+    margin: 0 0 0.25rem 0; 
+    font-weight: 300; 
+    letter-spacing: 1px; 
+}
+
+.auth-subtitle { 
+    color: var(--text-muted); 
+    font-size: 0.8rem; 
+    text-align: center; 
+    margin-bottom: 1.5rem; 
+    font-family: sans-serif; 
+}
+
+/* --- FORMULARIOS E INPUTS DE ALTA GAMA --- */
+.input-group { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.3rem; 
+    margin-bottom: 1rem; 
+    font-family: sans-serif; 
+}
+
+.input-group label { 
+    font-size: 0.7rem; 
+    text-transform: uppercase; 
+    color: var(--text-muted); 
+    letter-spacing: 0.5px; 
+}
+
+.input-group input { 
+    background-color: rgba(255, 255, 255, 0.02); 
+    border: 1px solid rgba(255, 255, 255, 0.08); 
+    padding: 0.75rem; 
+    border-radius: 0; /* Mantiene la estética de aristas rígidas de lujo */
+    color: var(--text-light); 
+    font-size: 0.95rem; 
+    transition: border-color 0.2s ease;
+}
+
+.input-group input:focus { 
+    outline: none; 
+    border-color: var(--gold); 
+}
+
+/* --- BOTONES Y CONMUTADORES --- */
+.btn-gold { 
+    width: 100%; 
+    background: linear-gradient(135deg, var(--gold), #9a7b41); 
+    color: #000; 
+    border: none; 
+    padding: 0.85rem; 
+    font-size: 0.95rem; 
+    font-weight: 600; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    transition: opacity 0.2s ease;
+}
+
+.btn-gold:hover {
+    opacity: 0.9;
+}
+
+.auth-switch { 
+    text-align: center; 
+    font-size: 0.85rem; 
+    color: var(--text-muted); 
+    margin-top: 1.2rem; 
+    font-family: sans-serif; 
+}
+
+.auth-switch span { 
+    color: var(--gold); 
+    text-decoration: underline; 
+    cursor: pointer; 
+}

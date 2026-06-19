@@ -5,9 +5,11 @@
   "main": "main/src/app.js",
   "scripts": {
     "clean": "npx shx rm -rf dist && npx shx mkdir dist",
-    "copy:assets": "npx shx mkdir -p dist/styles && npx shx cp main/src/index.html dist/index.html && npx shx cp main/src/style/styles.css dist/styles/styles.css && npx shx cp -r main/src/style/styles dist/styles/",
-    "build:js": "javascript-obfuscator main/src/app.js --output dist/script.js --compact true --self-defending true --string-array true --string-array-encoding 'rc4'",
-    "build": "npm run clean && npm run copy:assets && npm run build:js",
+    "copy:assets": "npx shx mkdir -p dist/style/styles dist/components dist/views && npx shx cp main/src/index.html dist/index.html && npx shx cp main/src/style/styles.css dist/style/styles.css && npx shx cp -r main/src/style/styles/* dist/style/styles/ && npx shx cp -r main/src/assets dist/",
+    "obfuscate:root": "javascript-obfuscator main/src/app.js --output dist/app.js --compact true --self-defending true --string-array true --string-array-encoding 'rc4'",
+    "obfuscate:components": "javascript-obfuscator main/src/components --output dist/components --compact true --self-defending true --string-array true --string-array-encoding 'rc4'",
+    "obfuscate:views": "javascript-obfuscator main/src/views --output dist/views --compact true --self-defending true --string-array true --string-array-encoding 'rc4'",
+    "build": "npm run clean && npm run copy:assets && npm run obfuscate:root && npm run obfuscate:components && npm run obfuscate:views",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "author": "dozelix",

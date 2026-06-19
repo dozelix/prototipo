@@ -8,8 +8,6 @@ main/
 # Dependencias de Node.js
 node_modules/
 
-# Carpeta de producción local (gh-pages la maneja de forma independiente)
-dist/
 
 # Registros de errores de npm
 npm-debug.log*

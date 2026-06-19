@@ -3,7 +3,7 @@
 # ==========================================================================
 
 # IGNORAR CÓDIGO FUENTE LIMPIO (Solo se queda en tu computadora local)
-
+/main
 # Dependencias de Node.js
 node_modules/
 
